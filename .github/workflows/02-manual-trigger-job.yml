@@ -16,6 +16,6 @@ jobs:
       with:
         creds: ${{secrets.AZURE_CREDENTIALS}}
     - name: Run Train job
-      run: src/job.yml
+      run: az ml job create --file src/job.yml --resource-group ml-resource-gp --workspace-name ml_workspace
 
 
